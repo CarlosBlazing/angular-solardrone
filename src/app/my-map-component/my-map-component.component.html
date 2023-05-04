@@ -1,0 +1,41 @@
+<<¡DOCTYPE html>
+  <html>
+
+  <head></head>
+
+  <body>
+    <div id="map" class="map"></div>
+
+    <div class="filter-control">
+      <div class="filter-title">
+        <h3>Filtrar polígonos por tipo</h3>
+      </div>
+      <div class="checkbox-container-1">
+        <mat-checkbox [(ngModel)]="tipo1" (ngModelChange)="updateFeaturesVisibility()" class="tipo1">Tipo 1</mat-checkbox>
+      </div>
+      <div class="checkbox-container-2">
+        <mat-checkbox [(ngModel)]="tipo2" (ngModelChange)="updateFeaturesVisibility()" class="tipo2">Tipo 2</mat-checkbox>
+      </div>
+      <div class="checkbox-container-3">
+        <mat-checkbox [(ngModel)]="tipo3" (ngModelChange)="updateFeaturesVisibility()" class="tipo3"> Tipo 3</mat-checkbox>
+      </div>
+    </div>
+
+    <mat-expansion-panel #panel1>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Filtrar por tipo</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-checkbox [(ngModel)]="tipo1" (ngModelChange)="updateFeaturesVisibility()" class="tipo1">Tipo 1</mat-checkbox>
+      <mat-checkbox [(ngModel)]="tipo2" (ngModelChange)="updateFeaturesVisibility()" class="tipo2">Tipo 2</mat-checkbox>
+      <mat-checkbox [(ngModel)]="tipo3" (ngModelChange)="updateFeaturesVisibility()" class="tipo3">Tipo 3</mat-checkbox>
+    </mat-expansion-panel>
+    
+    <button mat-icon-button (click)="panel1.toggle()">
+      <mat-icon>filter_list</mat-icon>
+    </button>
+    
+
+
+  </body>
+
+  </html>
